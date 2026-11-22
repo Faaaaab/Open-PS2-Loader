@@ -216,6 +216,7 @@ EE_CFLAGS += -fsingle-precision-constant -DOPL_VERSION=\"$(OPL_VERSION)\"
 # There are a few places where the config key/value are truncated, so disable these warnings
 EE_CFLAGS += -Wno-format-truncation -Wno-stringop-truncation
 # Generate .d files to track header file dependencies of each object file
+EE_CFLAGS += -std=gnu17
 EE_CFLAGS += -MMD -MP
 EE_OBJS += $(FRONTEND_OBJS) $(GFX_OBJS) $(AUDIO_OBJS) $(MISC_OBJS) $(EECORE_OBJS) $(IOP_OBJS)
 EE_OBJS := $(EE_OBJS:%=$(EE_OBJS_DIR)%)
